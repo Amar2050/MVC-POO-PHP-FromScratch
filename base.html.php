@@ -26,6 +26,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="games.php">Jeux</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="users.php">Utilisateurs</a>
+                </li>
             </ul>
         </div>
     </nav>
