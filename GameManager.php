@@ -1,7 +1,7 @@
 <?php
+ require_once "Manager.php";
 
-
-class GameManager {
+class GameManager extends Manager {
 
     private $games;
 
@@ -11,6 +11,15 @@ class GameManager {
 
     public function getGames(){
         return $this->games;
+    }
+
+    public function loadGames(){
+        $req = $this->getBdd()->prepare("SELECT * FROM games");
+        $req->execute();
+        $myGames = $req->fetchAll(PDO::FETCH_ASSOC);
+
+        var_dump($myGames);
+
     }
 
 
