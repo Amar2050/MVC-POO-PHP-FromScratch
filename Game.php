@@ -5,13 +5,13 @@ class Game {
 
     private $id;
     private $title;
-    private $nb_players;
+    private $nbPlayers;
 
-    public function __construct($id,$title,$nb_players){
+    public function __construct($id,$title,$nbPlayers){
 
         $this->id = $id;
         $this->title = $title;
-        $this->nb_players = $nb_players;
+        $this->nb_players = $nbPlayers;
         
     }
 
@@ -55,22 +55,23 @@ class Game {
         return $this;
     }
 
+
     /**
-     * Get the value of nb_players
+     * Get the value of nbPlayers
      */ 
-    public function getNb_players()
+    public function getNbPlayers()
     {
-        return $this->nb_players;
+        return $this->nbPlayers;
     }
 
     /**
-     * Set the value of nb_players
+     * Set the value of nbPlayers
      *
      * @return  self
      */ 
-    public function setNb_players($nb_players)
+    public function setNbPlayers($nbPlayers)
     {
-        $this->nb_players = $nb_players;
+        $this->nbPlayers = $nbPlayers;
 
         return $this;
     }

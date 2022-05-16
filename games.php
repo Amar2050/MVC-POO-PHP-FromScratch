@@ -1,4 +1,15 @@
-<?php  ob_start(); ?>
+<?php  
+require_once "Game.php";
+
+$game1 = new Game(1,"Tarkov", 13);
+$game2 = new Game(2,"Lemnis Gate", 10);
+$game3 = new Game(3,"Mario Party 280", 7);
+$game4 = new Game(4,"Rayman", 1);
+
+$games = [$game1,$game2,$game3,$game4];
+
+ob_start(); 
+?>
 
 <table class="table  table-hover text-center shadow">
   <thead class="bg-secondary text-white">
@@ -9,24 +20,16 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Starcraft 2</td>
-      <td>8</td>
-      <td><a href=""><i class="fa-solid fa-edit"></i></a></td>
-      <td><a href=""><i class="fa-solid fa-trash"></i></a></td>
-    </tr>
-    <tr>
-      <td>Valorant</td>
-      <td>10</td>
-      <td><a href=""><i class="fa-solid fa-edit"></i></a></td>
-      <td><a href=""><i class="fa-solid fa-trash"></i></a></td>
-    </tr>
-    <tr>
-      <td>Among US</td>
-      <td>15</td>
-      <td><a href=""><i class="fa-solid fa-edit"></i></a></td>
-      <td><a href=""><i class="fa-solid fa-trash"></i></a></td>
-    </tr>
+
+     <?php foreach($games as $game) :?>
+        <tr>
+          <td><?= $game->getTitle() ?></td>
+          <td><?= $game->getNbPlayers() ?></td>
+          <td><a href=""><i class="fa-solid fa-edit"></i></a></td>
+          <td><a href=""><i class="fa-solid fa-trash"></i></a></td>
+        </tr>
+     <?php endforeach; ?>   
+     
   </tbody>
 </table>
 
