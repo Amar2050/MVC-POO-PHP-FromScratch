@@ -11,7 +11,7 @@ class Game {
 
         $this->id = $id;
         $this->title = $title;
-        $this->nb_players = $nbPlayers;
+        $this->nbPlayers = $nbPlayers;
         
     }
 
