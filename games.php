@@ -1,19 +1,7 @@
 <?php  
-require_once "Game.php";
 require_once "GameManager.php";
-
-$game1 = new Game(1,"Tarkov", 13);
-$game2 = new Game(2,"Lemnis Gate", 10);
-$game3 = new Game(3,"Mario Party 280", 7);
-$game4 = new Game(4,"Rayman", 1);
-
 $gameManager = new GameManager();
-
-$gameManager->addGame($game1);
-$gameManager->addGame($game2);
-$gameManager->addGame($game3);
-$gameManager->addGame($game4);
-
+$gameManager->loadGames();
 $games = $gameManager->getGames();
 
 ob_start(); 
