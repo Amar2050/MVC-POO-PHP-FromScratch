@@ -18,6 +18,7 @@ class GameManager extends Manager {
         $req = $this->getBdd()->prepare("SELECT * FROM games");
         $req->execute();
         $myGames = $req->fetchAll(PDO::FETCH_ASSOC);
+        $req->closeCursor();
 
         foreach($myGames as $game){
             $g = new Game($game['id'],$game['title'],$game['nb_players']);
