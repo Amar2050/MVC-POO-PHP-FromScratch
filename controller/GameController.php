@@ -15,6 +15,13 @@ class GameController {
         require_once "view/games.view.php";
     }
 
+    public function newGameForm(){
+        require_once "view/new.game.view.php";
+    }
+
+    public function newGameValidation(){
+        echo "YOUPI ";
+    }
 
 }
 
