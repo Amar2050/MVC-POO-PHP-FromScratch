@@ -1,17 +1,19 @@
 <?php
 
+require_once "GameManager.php";
 class GameController {
     private $gameManager;
 
 
+    public function __construct(){
+        $this->gameManager = new GameManager();
+        $this->gameManager->loadGames();        
+    }
 
 
 }
 
 
   
-require_once "GameManager.php";
-$gameManager = new GameManager();
-$gameManager->loadGames();
-$games = $gameManager->getGames();
+// $games = $gameManager->getGames();
 
