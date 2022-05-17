@@ -20,7 +20,9 @@ class GameController {
     }
 
     public function newGameValidation(){
-        echo "YOUPI ";
+      $this->gameManager->newGameDB($_POST['title'],$_POST['nbPlayers']);
+      header('Location:' . URL . "games" );
+   
     }
 
 }
