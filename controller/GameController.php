@@ -25,6 +25,10 @@ class GameController {
    
     }
 
+    public function editGameForm($id){
+            echo $id;
+    }
+
 }
 
 
