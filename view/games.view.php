@@ -1,11 +1,4 @@
-<?php ob_start();
-require_once "modele/GameManager.php";
-
-$manager = new GameManager();
-$manager->loadGames();
-var_dump($manager->getGameById(4));
-
-?>
+<?php ob_start(); ?>
 
 <table class="table  table-hover text-center shadow">
   <thead class="bg-secondary text-white">
