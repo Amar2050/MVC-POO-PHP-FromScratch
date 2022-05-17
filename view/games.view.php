@@ -1,11 +1,4 @@
-<?php  
-require_once "GameManager.php";
-$gameManager = new GameManager();
-$gameManager->loadGames();
-$games = $gameManager->getGames();
-
-ob_start(); 
-?>
+<?php ob_start(); ?>
 
 <table class="table  table-hover text-center shadow">
   <thead class="bg-secondary text-white">
