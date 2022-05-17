@@ -14,6 +14,14 @@ class GameManager extends Manager {
         return $this->games;
     }
 
+    public function getGameById($id){
+        foreach($this->games as $game) {
+            if ($id == $game->getId()) {
+               var_dump($game);
+            }
+        }
+    }
+
     public function loadGames(){
         $req = $this->getBdd()->prepare("SELECT * FROM games");
         $req->execute();
